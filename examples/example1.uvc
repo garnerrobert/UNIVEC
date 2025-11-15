@@ -1,0 +1,20 @@
+^UNIVEC 0.50.0 utf-8^
+!CRS EPSG:4326!
+
+//This is a comment//
+
+[GTYPE POINT id=1; name='First point'
+-32.385945,60.793526
+]
+
+[GTYPE LINE id=2; name='First line'
+-33.683903,59.989724;
+-33.673038,59.902945
+]
+
+[GTYPE POLYGON id=3 name='First polygon'
+-35.228034,60.180316;
+-35.299502,59.998284;
+-35.200539,59.998284;
+-35.228034,60.180316
+]
