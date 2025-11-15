@@ -1,0 +1,97 @@
+# Quick start
+_UNIVEC version - 0.50.0 developmental_
+
+This page offers a basic guide to constructing a UNIVEC file and introduces simple parameters.
+
+## Beginning a UNIVEC file
+### The declaration
+It is not strictly necessary to include a declaration at the beginning of a UNIVEC file, however it is considered good practice to do so.
+
+A declaration will contain the magic number ``^UNIVEC``, the version of UNIVEC used and the encoding of the file.
+
+It is usually situated on line 1.
+
+For example -
+
+``^UNIVEC 0.50.0 utf-8^``
+
+Note how there is nothing specifying what the individual components of the declaration are, this information is assumed given the presence of the magic number ``^UNIVEC``.
+
+> [!WARNING]
+> Ensure the file has the extension ``.uvc``.
+
+### Specifying the coordinate reference system
+In order for GIS software to know how to visualise your data, you need to specify the coordinate reference system (CRS) your data are in.
+
+You can use any CRS from any registry you wish (remember - UNIVEC stores, but does not interpret, the data), however, you will obviously need to ensure compatibility with the destination GIS software.
+
+To specify the CRS, use ``!CRS``.
+
+For example,
+
+``!CRS EPSG:4326!``
+
+When ``!CRS`` is present, the final ``!`` is expected and signifies the end of the CRS information.
+
+This is usually on line 2 or 3, except if there is a comment before it.
+
+> [!NOTE]
+> Future versions of UNIVEC will provide support for custom CRSs.
+
+## The geospatial data
+UNIVEC supports three types of geospatial vector data - Point, Line and Polygon.
+
+### Declaring the geometry type
+Before adding a feature, it is essential to declare the geometry type of that feature.
+
+This is done using the following -
+
+  ``GTYPE POINT`` for points (single, standalone locations)
+  
+  ``GTYPE LINE`` for lines (lines connecting two or more locations)
+  
+  ``GTYPE POLYGON`` for polygons (closed shapes with defined borders)
+
+> [!WARNING]
+> You must declare the data type for **each** feature in your file as UNIVEC files support multiple geometry types in the one file.
+
+### Adding the geometry data
+#### Points
+```
+[GTYPE POINT id=_ID_
+_EASTING_,_NORTHING_
+]
+```
+
+#### Lines
+```
+[GTYPE LINE id=_ID_
+_EASTING_,_NORTHING_;
+_EASTING_,_NORTHING_
+]
+```
+
+#### Polygons
+```
+[GTYPE POLYGON id=_ID_
+_EASTING_,_NORTHING_;
+_EASTING_,_NORTHING_;
+_EASTING_,_NORTHING_
+]
+```
+
+## Attributes
+Above you have seen the ``id=_ID_`` name–value pair attribute in use, however, it is also possible to add any attribute, with some being specified by the UNIVEC standard.
+
+### Attributes specified by the UNIVEC standard
+* ``id=`` - the unique identifier for the feature.
+  * Must be an integer.
+  * Each coordinate within ``LINE`` or ``POLYGON`` features is assigned an ID in the form of a float based on the order of its appearance (e.g. ``1.0``, ``1.1``, ``1.2``) with the first coordinate being assigned ``1.0``, however these float IDs do not need to be specified.
+  * It is recommended to include an ``id=`` attribute with every feature.
+* ``name=`` - The name of the feature. Is a string.
+* ``color=`` - the color of the feature, specified as a hex triplet.
+* ``diameter=`` - the diameter, in millimeters, of an icon marking a ``POINT`` feature.
+* ``opacity=`` - the opacity of a feature, as defined by a percentage.
+
+## Elevation
+The capacity to include elevation data will be included in future versions of UNIVEC.
