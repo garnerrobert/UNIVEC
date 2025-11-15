@@ -1,5 +1,5 @@
 # Quick start
-_UNIVEC version - 0.50.0 developmental_
+_UNIVEC version - 0.50.0 pre-alpha_
 
 This page offers a basic guide to constructing a UNIVEC file and introduces simple parameters.
 
