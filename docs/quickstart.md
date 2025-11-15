@@ -95,3 +95,10 @@ Above you have seen the ``id=_ID_`` name–value pair attribute in use, however,
 
 ## Elevation
 The capacity to include elevation data will be included in future versions of UNIVEC.
+
+## Comments
+Comments are text that is not interpreted as part of the file.
+
+Enclose comments as such -
+
+``//COMMENT//``
