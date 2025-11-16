@@ -19,8 +19,8 @@ Thank you for your time and interest in improving UNIVEC!
 
 ## Specifications
 * File extension - ``.uvc``
-* Current release - 0.50.0 pre-alpha
-* Next release - 0.51.0 pre-alpha
+* Current release - 0.51.0 pre-alpha
+* Next release - to be announced
 * License for standard and documentation - [Creative Commons CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
 
 > [!CAUTION]
