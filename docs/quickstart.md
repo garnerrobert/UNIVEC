@@ -88,8 +88,15 @@ EASTING,NORTHING
 ]
 ```
 
+> [!NOTE]
+> Elevation, or z-axis, values in coordinates can be placed after the easting and northing values.
+> This would make coordinates with a z-axis -
+> ```
+> EASTING,NORTHING,ELEVATION
+> ```
+
 ## Attributes
-Above you have seen the ``id=_ID_`` name–value pair attribute in use, however, it is also possible to add any attribute, with some being specified by the UNIVEC standard.
+Above you have seen the ``id=ID`` name–value pair attribute in use, however, it is also possible to add any attribute, with some being specified by the UNIVEC standard.
 
 ### Attributes specified by the UNIVEC standard
 * ``id=`` - the unique identifier for the feature.
@@ -99,11 +106,8 @@ Above you have seen the ``id=_ID_`` name–value pair attribute in use, however,
 * ``name=`` - The name of the feature. Is a string.
 * ``color=`` - the color of the feature, specified as a hex triplet preceded by a hash.
 * ``diameter=`` - the diameter, in millimeters, of an icon marking a ``POINT`` feature.
-* ``thickness=`` - the thickness, in millimeters, of a LINE feature.
+* ``thickness=`` - the thickness, in millimeters, of a ``LINE`` feature.
 * ``opacity=`` - the opacity of a feature, as defined by a percentage.
-
-## Elevation
-The capacity to include elevation data will be included in future versions of UNIVEC.
 
 ## Comments
 Comments are text that is not interpreted as part of the file.
