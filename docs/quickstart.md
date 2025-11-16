@@ -1,5 +1,5 @@
 # Quick start
-_UNIVEC version - 0.50.0 pre-alpha_
+_UNIVEC version - 0.51.0 pre-alpha_
 
 This page offers a basic guide to constructing a UNIVEC file and introduces simple parameters.
 
@@ -13,7 +13,7 @@ It is usually situated on line 1.
 
 For example -
 
-``^UNIVEC 0.50.0 utf-8^``
+``^UNIVEC 0.51.0 utf-8^``
 
 Note how there is nothing specifying what the individual components of the declaration are, this information is assumed given the presence of the magic number ``^UNIVEC``.
 
@@ -35,8 +35,16 @@ When ``!CRS`` is present, the final ``!`` is expected and signifies the end of t
 
 This is usually on line 2 or 3, except if there is a comment before it.
 
-> [!NOTE]
-> Future versions of UNIVEC will provide support for custom CRSs.
+#### Specifying a CRS using well-known text
+UNIVEC supports the [Open Geospatial Consortium well-known text standard](https://www.ogc.org/standards/wkt-crs/) for representation of coordinate reference systems.
+
+Below is how to include the WKT in a UNIVEC file -
+
+```
+!!CRS
+WKT as per OGC standard
+!!
+```
 
 ## The geospatial data
 UNIVEC supports three types of geospatial vector data - Point, Line and Polygon.
@@ -58,25 +66,25 @@ This is done using the following -
 ### Adding the geometry data
 #### Points
 ```
-[GTYPE POINT id=_ID_
-_EASTING_,_NORTHING_
+[GTYPE POINT id=ID
+EASTING,NORTHING
 ]
 ```
 
 #### Lines
 ```
-[GTYPE LINE id=_ID_
-_EASTING_,_NORTHING_;
-_EASTING_,_NORTHING_
+[GTYPE LINE id=ID
+EASTING,NORTHING;
+EASTING,NORTHING
 ]
 ```
 
 #### Polygons
 ```
-[GTYPE POLYGON id=_ID_
-_EASTING_,_NORTHING_;
-_EASTING_,_NORTHING_;
-_EASTING_,_NORTHING_
+[GTYPE POLYGON id=ID
+EASTING,NORTHING;
+EASTING,NORTHING;
+EASTING,NORTHING
 ]
 ```
 
@@ -89,8 +97,9 @@ Above you have seen the ``id=_ID_`` name–value pair attribute in use, however,
   * Each coordinate within ``LINE`` or ``POLYGON`` features is assigned an ID in the form of a float based on the order of its appearance (e.g. ``1.0``, ``1.1``, ``1.2``) with the first coordinate being assigned ``1.0``, however these float IDs do not need to be specified.
   * It is recommended to include an ``id=`` attribute with every feature.
 * ``name=`` - The name of the feature. Is a string.
-* ``color=`` - the color of the feature, specified as a hex triplet.
+* ``color=`` - the color of the feature, specified as a hex triplet preceded by a hash.
 * ``diameter=`` - the diameter, in millimeters, of an icon marking a ``POINT`` feature.
+* ``thickness=`` - the thickness, in millimeters, of a LINE feature.
 * ``opacity=`` - the opacity of a feature, as defined by a percentage.
 
 ## Elevation
