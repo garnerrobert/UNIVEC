@@ -5,10 +5,10 @@ This repository is the open standard for the UNIVEC (``.uvc``) file format, an o
 
 ## Features
 * Human- and machine-readability
-* All information is contained in the one file, providing ease of use
+* All information is contained in the one file, providing ease-of-use
 * Ability to include multiple geometry types in the one file
 * Flexibility to select coordinate reference systems
-* An open standard, free to use by anyone, forever.
+* An open standard, free to use by anyone, forever
 
 ## Contributing
 We welcome contributions to the UNIVEC standard. Please either submit an issue with your suggestions or fork the repository and submit a pull request.
