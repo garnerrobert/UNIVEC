@@ -1,5 +1,5 @@
 # Quick start
-_UNIVEC version - 0.51.0 pre-alpha_
+_UNIVEC version - 0.52.0 pre-alpha_
 
 This page offers a basic guide to constructing a UNIVEC file and introduces simple parameters.
 
@@ -60,8 +60,21 @@ This is done using the following -
   
   ``GTYPE POLYGON`` for polygons (closed shapes with defined borders)
 
+#### Single geometry types across entire files
+It is possible to declare a single geometry type covering all features in the one file.
+
+To do this, after the CRS information, include -
+
+  ``&GEOALL POINT&`` for points
+
+  ``&GEOALL LINE&`` for lines
+
+  ``&GEOALL POLYGON&`` for polygons
+
+When writing the feature, ``[G`` should be used instead of ``[GTYPE`` as shown above.
+
 > [!WARNING]
-> You must declare the data type for **each** feature in your file as UNIVEC files support multiple geometry types in the one file.
+> If ``[GTYPE`` is used in a single-geometry file, the file will be invalid.
 
 ### Adding the geometry data
 #### Points
