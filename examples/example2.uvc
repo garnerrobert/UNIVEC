@@ -1,0 +1,17 @@
+^UNIVEC 0.52.0 utf-8^
+!CRS EPSG:4326!
+&GEOALL POINT&
+
+//This is an example of a file with a unique geometry type//
+
+[G id=1
+-152.569294,27.729353
+]
+
+[G id=2
+-152.702354,27.699624
+]
+
+[G id=3
+-152.965241,27.848439
+]
