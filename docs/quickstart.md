@@ -54,11 +54,11 @@ Before adding a feature, it is essential to declare the geometry type of that fe
 
 This is done using the following -
 
-  ``GTYPE POINT`` for points (single, standalone locations)
+  ``[GTYPE POINT`` for points (single, standalone locations)
   
-  ``GTYPE LINE`` for lines (lines connecting two or more locations)
+  ``[GTYPE LINE`` for lines (lines connecting two or more locations)
   
-  ``GTYPE POLYGON`` for polygons (closed shapes with defined borders)
+  ``[GTYPE POLYGON`` for polygons (closed shapes with defined borders)
 
 #### Single geometry types across entire files
 It is possible to declare a single geometry type covering all features in the one file.
