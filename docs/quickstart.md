@@ -50,14 +50,19 @@ WKT as per OGC standard
 Any metadata not mentioned above can be included optionally, with ``##`` appearing before and after the lines containing the metadata. The following variables are specified by the UNIVEC standard -
 
 * ``filename=`` - the filename, including the ``.uvc`` extension
-* ``contact=`` or ``author=`` - the person responsible for the dataset
-* ``organization=`` - the organization responsible for the dataset, or the organization the person listed under ``contact=`` or ``author=`` belongs to
-* ``email=`` - a contact email address for enquiries about the dataset
-* ``telephone=`` - a phone number for enquiries about the dataset
-* ``facsimile=`` - a facsimile number for enquiries about the dataset
-* ``url=`` - the URL for downloading the dataset or that of a webpage in which a link to download the dataset is present
-* ``web=`` - the webpage of the author, contact person or organization responsible for the dataset
-* ``date=`` or ``datetime=`` - a date value, specified in accordance with [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html).
+* ``id=`` - a unique identifier within an unspecified system
+* ``doi=`` - the [Digital Object Identifier (DOI)](https://www.doi.org/) of the file
+  * The value must be the DOI of the file **itself** and not the DOI of the project containing the file
+  * Specify either the DOI name or the full URL containing ``doi.org/``
+  * If the file has more than one DOI, list each DOI with ``doi1=``, ``doi2=`` and so on
+* ``contact=`` or ``author=`` - the person responsible for the file
+* ``organization=`` - the organization responsible for the file, or the organization the person listed under ``contact=`` or ``author=`` belongs to
+* ``email=`` - a contact email address for enquiries about the file
+* ``telephone=`` - a phone number for enquiries about the file
+* ``facsimile=`` - a facsimile number for enquiries about the file
+* ``url=`` - the URL for downloading the file or that of a webpage in which a link to download the file is present
+* ``web=`` - the webpage of the author, contact person or organization responsible for the file
+* ``date=`` or ``datetime=`` - a date value, specified in accordance with [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)
 
 ## The geospatial data
 UNIVEC supports three types of geospatial vector data - Point, Line and Polygon.
