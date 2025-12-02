@@ -118,7 +118,7 @@ Above you have seen the ``id=ID`` name–value pair attribute in use, however, i
   * Each coordinate within ``LINE`` or ``POLYGON`` features is assigned an ID in the form of a float based on the order of its appearance (e.g. ``1.0``, ``1.1``, ``1.2``) with the first coordinate being assigned ``1.0``, however these float IDs do not need to be specified.
   * It is recommended to include an ``id=`` attribute with every feature.
 * ``name=`` - the name of the feature. Is a string.
-* ``date=`` - a date value, specified in accordance with [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html).
+* ``date=`` or ``datetime=`` - a date value, specified in accordance with [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html).
 * ``color=`` - the color of the feature, specified as a hex triplet preceded by a hash.
 * ``diameter=`` - the diameter, in millimeters, of an icon marking a ``POINT`` feature.
 * ``thickness=`` - the thickness, in millimeters, of a ``LINE`` feature.
