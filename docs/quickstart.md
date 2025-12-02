@@ -13,7 +13,7 @@ It is usually situated on line 1.
 
 For example -
 
-``^UNIVEC 0.51.0 utf-8^``
+``^UNIVEC 0.52.0 utf-8^``
 
 Note how there is nothing specifying what the individual components of the declaration are, this information is assumed given the presence of the magic number ``^UNIVEC``.
 
@@ -117,7 +117,8 @@ Above you have seen the ``id=ID`` name–value pair attribute in use, however, i
   * Must be an integer.
   * Each coordinate within ``LINE`` or ``POLYGON`` features is assigned an ID in the form of a float based on the order of its appearance (e.g. ``1.0``, ``1.1``, ``1.2``) with the first coordinate being assigned ``1.0``, however these float IDs do not need to be specified.
   * It is recommended to include an ``id=`` attribute with every feature.
-* ``name=`` - The name of the feature. Is a string.
+* ``name=`` - the name of the feature. Is a string.
+* ``date=`` - a date value, specified in accordance with [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html).
 * ``color=`` - the color of the feature, specified as a hex triplet preceded by a hash.
 * ``diameter=`` - the diameter, in millimeters, of an icon marking a ``POINT`` feature.
 * ``thickness=`` - the thickness, in millimeters, of a ``LINE`` feature.
