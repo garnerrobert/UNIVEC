@@ -46,6 +46,19 @@ WKT as per OGC standard
 !!
 ```
 
+### Other metadata
+Any metadata not mentioned above can be included optionally, with ``##`` appearing before and after the lines containing the metadata. The following variables are specified by the UNIVEC standard -
+
+* ``filename=`` - the filename, including the ``.uvc`` extension
+* ``contact=`` or ``author=`` - the person responsible for the dataset
+* ``organization=`` - the organization responsible for the dataset, or the organization the person listed under ``contact=`` or ``author=`` belongs to
+* ``email=`` - a contact email address for enquiries about the dataset
+* ``telephone=`` - a phone number for enquiries about the dataset
+* ``facsimile=`` - a facsimile number for enquiries about the dataset
+* ``url=`` - the URL for downloading the dataset or that of a webpage in which a link to download the dataset is present
+* ``web=`` - the webpage of the author, contact person or organization responsible for the dataset
+* ``date=`` or ``datetime=`` - a date value, specified in accordance with [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html).
+
 ## The geospatial data
 UNIVEC supports three types of geospatial vector data - Point, Line and Polygon.
 
